@@ -1,6 +1,8 @@
 # vue-multi-page-cli3
 
 ## Project setup
+> build base vue-cli v3.0.4
+
 ```
 npm install
 ```
