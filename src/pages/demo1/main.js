@@ -3,8 +3,15 @@ import App from "./App.vue";
 import router from "./router";
 
 Vue.config.productionTip = false;
+alert(2);
+// new Vue({
+//   router,
+//   render: h => h(App)
+// }).$mount("#app");
 
 new Vue({
+  el: "#app",
   router,
-  render: h => h(App)
-}).$mount("#app");
+  components: { App },
+  template: "<App/>"
+});

@@ -26,3 +26,8 @@ npm run test
 ```
 npm run lint
 ```
+
+
+## Q&A
+- 为什么要使用eslint+prettier
+http://web.jobbole.com/94786/,https://segmentfault.com/a/1190000015315545
