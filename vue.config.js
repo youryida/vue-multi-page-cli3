@@ -69,13 +69,13 @@ module.exports = {
     }
   }
   //修改webpack 原始配置
-  // chainWebpack: config => {
+  // ,chainWebpack: config => {
   //   config.module
   //     .rule("eslint")
   //     .use("eslint-loader")
   //     .loader("eslint-loader")
   //     .tap(options => {
-  //       options.fix = true;
+  //       // options.fix = true;//为什么加了这行，非但没有自动fix，反而lint warn都没了 @liuxuefeng 20181011
   //       return options;
   //     });
   // }
