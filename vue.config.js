@@ -38,13 +38,14 @@ module.exports = {
       // 模板来源
       template: "src/pages/demo1/index.html",
       // 在 dist/index.html 的输出
-      filename: "demo1/index.html",
+      filename: "demo1/index.html"
       // 在这个页面中包含的块，默认情况下会包含
       // 提取出来的通用 chunk 和 vendor chunk。
-      chunks: ["chunk-vendors", "chunk-common", "index"]
+      // chunks: ["chunk-vendors", "chunk-common", "index"]
     }
   },
   lintOnSave: true,
+  runtimeCompiler: true,
   // transpileDependencies:[]
   css: {
     modules: true
