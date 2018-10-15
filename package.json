@@ -21,22 +21,6 @@
     "sass-loader": "^7.0.1",
     "vue-template-compiler": "^2.5.17"
   },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true,
-      "browser": true,
-      "es6": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "@vue/prettier"
-    ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
-  },
   "postcss": {
     "plugins": {
       "autoprefixer": {}
