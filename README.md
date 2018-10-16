@@ -27,12 +27,17 @@ npm run test
 npm run lint
 ```
 
+### 本地预览部署版本
+```
+npm run serve-dist
+```
 
 ## Q&A
 
 #### 1. 开发之前要准备哪些工作？
 
-- IDE安装prettier插件，并打开"保存时自动格式化"配置开关，风格描述文件设置为当前项目根目录下的`prettier.config.js`
+- IDE安装prettier插件，并打开"保存时自动格式化"配置开关，代码风格描述文件设置为当前项目根目录下的`prettier.config.js`。如果IDE无法读取此处配置，那么请手动同步配置到IDE。（如，sublime text3的JsPrettier插件无法读取，需要手动同步配置到`JsPrettier.sublime-settings`）
+- 全局安装[serve](https://github.com/zeit/serve):`npm install -g serve`，用来启动本地静态服务，预览部署版本效果。相关配置见`/serve.json`（已开启history模式）
 
 #### 2. 为什么要使用eslint+prettier
 
