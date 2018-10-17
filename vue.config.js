@@ -53,6 +53,16 @@ module.exports = {
   devServer: {
     open: true,
     host: LANIP,
+    historyApiFallback: {
+      rewrites: [
+        {
+          from: /^(\/.+?\/).+/,
+          to: function(context) {
+            return context.match[1] + "/index.html";
+          }
+        }
+      ]
+    },
     proxy: {
       "/sohu-fashion": {
         target: "http://fashion.sohu.com",
