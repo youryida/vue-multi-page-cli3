@@ -1,6 +1,7 @@
 {
   "public": "/dist",
   "rewrites": [
-    { "source": "/:path1/**", "destination": "/:path1/index.html" }
+    { "source": "/:path1/**", "destination": "/:path1/index.html" },
+    { "source": "/sohu-fashion/:paths", "destination": "http://fashion.sohu.com/:paths" }
   ]
 }

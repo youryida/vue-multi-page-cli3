@@ -55,6 +55,7 @@ module.exports = {
     host: LANIP,
     historyApiFallback: {
       rewrites: [
+        //所有请求打到对应的一级path下的/index.html
         {
           from: /^(\/.+?\/).+/,
           to: function(context) {
@@ -64,9 +65,8 @@ module.exports = {
       ]
     },
     proxy: {
-      "/sohu-fashion": {
+      "^/sohu-fashion": {
         target: "http://fashion.sohu.com",
-        // target: 'http://sns-api-test2.sohusce.com',
         changeOrigin: true,
         pathRewrite: {
           "^/sohu-fashion": ""
