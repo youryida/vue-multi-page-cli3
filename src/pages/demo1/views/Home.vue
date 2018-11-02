@@ -26,8 +26,10 @@ export default {
   },
   methods: {
     fetchList() {
-      fetch("/sohu-fashion/upload/xiaohua2018wjy/data-ad-star.json")
-        .then(res => res.json())
+      fetch("/api/sohu-fashion/upload/xiaohua2018wjy/data-ad-star.json")
+        .then(res => {
+          res.json();
+        })
         .then(data => {
           this.list = data;
         });
