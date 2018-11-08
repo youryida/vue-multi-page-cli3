@@ -1,11 +1,11 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="@/pages/demo1/assets/logo.svg">
+    <img alt="Vue logo" src="@/pages/demo2/assets/logo.png">
     <h1>This is an home page</h1>
     <hr>
     <h3>1. Demo - 局部组件（当前页应用内）</h3>
     <p>
-      <Demo1Title content="这里是一个仅供当前页应用(demo1)使用的组件，文件目录：@/pages/demo1/components中"/>
+      <Demo2Title content="这里是一个仅供当前页应用(demo2)使用的组件，文件目录：@/pages/demo2/components中"/>
     </p>
     <hr>
     <h3>2. Demo - server API 代理</h3>
@@ -15,12 +15,12 @@
 </template>
 <script>
 // @ is an alias to /src
-import Demo1Title from "../components/Demo1Title.vue";
+import Demo2Title from "../components/Demo2Title.vue";
 
 export default {
   name: "home",
   components: {
-    Demo1Title
+    Demo2Title
   },
   data() {
     return {

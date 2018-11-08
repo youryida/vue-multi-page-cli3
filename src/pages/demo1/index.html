@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>demo1</title>
+  </head>
 
-<head>
-  <title>demo1</title>
-</head>
+  <body>
+    <h1>Page : demo1</h1>
+    <div id="app"></div>
 
-<body>
-  <h1>Page : demo1</h1>
-  <div id="app">
-  </div>
-  
-</body>
-
+    <script type="text/javascript" src="/outsider.js"></script>
+    <script>
+      window.extra.print("demo1中的不受webpack管理的js引入测试");
+    </script>
+  </body>
 </html>

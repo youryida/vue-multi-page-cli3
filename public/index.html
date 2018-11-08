@@ -13,6 +13,10 @@
   <p>目前是写死的，后面应该是动态读取多项目，然后注入进来。</p>
   <a href="/demo1">demo1</a>
   <a href="/demo2">demo2</a>
+  <script type="text/javascript" src="./extra.js"></script>
+  <script>
+    window.extra.print("demo1中的不受webpack管理的js引入测试");
+  </script>
 </body>
 
 </html>

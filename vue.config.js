@@ -42,6 +42,17 @@ module.exports = {
       // 在这个页面中包含的块，默认情况下会包含
       // 提取出来的通用 chunk 和 vendor chunk。
       // chunks: ["chunk-vendors", "chunk-common", "index"]
+    },
+    demo2: {
+      // page 的入口
+      entry: "src/pages/demo2/main.js",
+      // 模板来源
+      template: "src/pages/demo2/index.html",
+      // 在 dist/index.html 的输出
+      filename: "demo2/index.html"
+      // 在这个页面中包含的块，默认情况下会包含
+      // 提取出来的通用 chunk 和 vendor chunk。
+      // chunks: ["chunk-vendors", "chunk-common", "index"]
     }
   },
   lintOnSave: true,
@@ -53,6 +64,7 @@ module.exports = {
   devServer: {
     open: true,
     host: LANIP,
+    // historyApiFallback: true,
     historyApiFallback: {
       rewrites: [
         //所有请求打到对应的一级path下的/index.html
@@ -65,11 +77,12 @@ module.exports = {
       ]
     },
     proxy: {
-      "^/sohu-fashion": {
+      "^/api/sohu-fashion/": {
         target: "http://fashion.sohu.com",
         changeOrigin: true,
         pathRewrite: {
-          "^/sohu-fashion": ""
+          "^/api/sohu-fashion": ""
+          // "^/api/sohu-fashion/(.*)": "/$1"
         }
       }
     },

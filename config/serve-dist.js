@@ -1,3 +1,6 @@
+/**
+ * 构建成功后，本地预览dist/下的部署版本
+ */
 const httpProxyMiddleware = require("http-proxy-middleware");
 const browserSync = require("browser-sync").create();
 
@@ -15,7 +18,8 @@ const proxyHtml = httpProxyMiddleware(["/demo1/**", "!/demo1/index.html"], {
 const proxyAPI = httpProxyMiddleware(["/api/sohu-fashion/"], {
   target: "http://fashion.sohu.com",
   pathRewrite: {
-    "^/api/sohu-fashion/(.*)": "/$1"
+    "^/api/sohu-fashion": ""
+    // "^/api/sohu-fashion/(.*)": "/$1"
   },
   changeOrigin: true,
   headers: {

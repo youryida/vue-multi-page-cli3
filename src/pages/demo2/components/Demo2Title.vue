@@ -1,13 +1,12 @@
 <template>
-<div>
-  <b>{{ content }}</b>
-</div>
-
+  <div>
+    <i>{{ content }}</i>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "Demo1Title",
+  name: "Demo2Title",
   props: {
     content: String
   }
