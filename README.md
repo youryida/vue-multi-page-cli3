@@ -4,7 +4,7 @@
 
 ## 名词解释
 
-- 子项目。我们把该多页应用中的每一个 page 应用，称为一个子项目。即，该多页应用包含了多个子项目。
+- 子项目。我们把该多页应用中的每一个 page 项目（目录结构体现为/src/pages/下的各个文件夹），称为一个子项目。即，该多页应用项目包含了多个子项目。
 
 ## 安装
 
@@ -56,8 +56,6 @@ npm run serve:dist
 注：sublime text3的JsPrettier插件无法读取`.prettierrc.js`，需要手动同步配置到`JsPrettier.sublime-settings`。但是即便如此，截止到20181017，sublime的JsPrettier插件依然无法有效支持对除js外其他文件的格式化，等等一系列问题。坑爹，强烈建议大家放弃sublime。
 ```
 
-- 全局安装[serve](https://github.com/zeit/serve):`npm install -g serve`，用来启动本地静态服务，预览部署版本效果。相关配置见`/build/serve-dist.json`（已开启 history 模式）
-
 ### 二、代码风格约束
 
 #### 1. 为什么要使用 eslint+prettier
@@ -94,7 +92,7 @@ npm run serve:dist
 babel、eslint、prettier、postcss 等，其配置文件或多或少的支持了多种命名格式，如 `.xxrc/.xxrc.js/.xxrc.json/.xxrc.yaml/xx.config.js`。
 上述每种文件命名的格式规范和适用场景有一些细微的区别，从以下几点考虑，我们推荐在插件支持的情况下，优先使用`.xxrc.js`：
 
-- 优先级最高
+- 优先级最高(例如：[eslint](https://eslint.org/docs/user-guide/configuring#configuration-file-formats))
 - Linux 类系统中表示为隐藏文件，可以清晰的表达该类文件的只读特征
 - 支持添加逻辑控制、补充注释等，以便实现更精细化、更清晰易读的约束控制
 - .js 文件易于实现文件内 code 的自动格式化
