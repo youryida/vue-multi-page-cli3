@@ -6,11 +6,15 @@
 
   <body>
     <h1>Page : demo1</h1>
+    <h2><%= VUE_APP_TITLE %></h2>
+    <h1><%= NODE_ENV %></h1>
     <div id="app"></div>
 
     <script type="text/javascript" src="/static/js/testLog.js"></script>
     <script>
       window.testLog("demo1中的不受webpack管理的js引入测试");
+      // console.log(process.env.NODE_ENV);
+      // console.log(process.env.VUE_APP_TITLE);
     </script>
   </body>
 </html>
