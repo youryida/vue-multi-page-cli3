@@ -8,7 +8,6 @@
     "build": "vue-cli-service build --mode api.test",
     "build:prod": "vue-cli-service build --mode api.test",
     "dist": "node config/serve-dist.js",
-    "dist:prod": "node config/serve-dist.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

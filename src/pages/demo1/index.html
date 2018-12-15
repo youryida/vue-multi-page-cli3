@@ -12,6 +12,11 @@
 
     <script type="text/javascript" src="/static/js/testLog.js"></script>
     <script>
+      const GLOBAL_CONFIG = {
+        apiEnv: "<%= VUE_APP_API_ENV %>",
+        coreServer: <%= VUE_APP_CORE_SERVER %>,
+        datalogServer: <%= VUE_APP_DATALOG_SERVER %>
+      };
       window.testLog("demo1中的不受webpack管理的js引入测试");
       // console.log(process.env.NODE_ENV);
       // console.log(process.env.VUE_APP_TITLE);
